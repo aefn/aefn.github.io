@@ -15,7 +15,34 @@
 <script type="application/ld+json">
 {"url":"https://aef.ir/","headline":"Amir Fallahian e-Home","name":"Amir Fallahian e-Home","description":"This is Amir Fallahian e-home. I write here about every thing mostly related to the IT and Automation.","@type":"WebSite","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://aef.ir/feed.xml" title="Amir Fallahian e-Home" /><script>
+<!-- Cookie Consent by https://www.FreePrivacyPolicy.com -->
+<script type="text/javascript" src="//www.FreePrivacyPolicy.com/cookie-consent/releases/3.0.0/cookie-consent.js"></script>
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+        cookieconsent.run({ "notice_banner_type": "headline", "consent_type": "express", "palette": "light", "change_preferences_selector": "#changePreferences", "language": "en", "website_name": "Amir Fallahian e-Home" });
+    });
+
+    // Added by me
+    function revoke_cookie_consent() {
+        var d = new Date();
+        d.setTime(d.getTime() + (0 * 60 * 1000));
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = 'cookie_consent_user_accepted' + "=" + "" + ";path=/;expires=" + expires;
+        console.log("cookie consent is revoked!");
+    }
+
+    function printAllCookies() {
+        var cookies = document.cookie.split("; ");
+        var cookie_String = "";
+        for (var c = 0; c < cookies.length; c++) {
+            cookie_String += "Cookie : \n " + cookies[c] + "\n";
+        }
+        alert(cookie_String);
+    }
+</script>
+
+<noscript><a href="https://www.freeprivacypolicy.com/cookie-consent/">Cookie Consent by FreePrivacyPolicy.com</a></noscript>
+<!-- End Cookie Consent --><link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://aef.ir/feed.xml" title="Amir Fallahian e-Home" /><script type="text/plain" cookie-consent="tracking">
 if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1")) {
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -41,7 +68,7 @@ if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNo
         </span>
       </label>
 
-      <div class="trigger"><a class="page-link" href="/about.html">About me</a></div>
+      <div class="trigger"><a class="page-link" href="/about.html">About me</a><a class="page-link" href="/blog.html">My blog</a><a class="page-link" href="/resume.html">Resume</a></div>
     </nav></div>
 </header><main class="page-content" aria-label="Content">
       <div class="wrapper">
@@ -74,13 +101,18 @@ You can see the changes on my github repository.</p>
       </svg> <span class="username">amir-fallahian</span></a></li><li><a target="_blank" href="https://www.twitter.com/amirebrahimf"><svg
         class="svg-icon">
         <use xlink:href="/assets/minima-social-icons.svg#twitter"></use>
-      </svg> <span class="username">amirebrahimf</span></a></li><!-- Email at the end --><li><a class="u-email" href="mailto:www.aef.ir@gmail.com">www.aef.ir@gmail.com</a></li></ul></div>
-
-
+      </svg> <span class="username">amirebrahimf</span></a></li><li><a target="_blank" href="/feed.xml"><svg class="svg-icon">
+        <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+      </svg> <span>feed.xml</span></a></li><!-- Email at the end --><li><a class="u-email" href="mailto:www.aef.ir@gmail.com">www.aef.ir@gmail.com</a></li></ul></div>
     </div>
-
+    <div class="footer-row">
+      <a href="https://aef.ir/privacy_policy.html">Privacy Policy</a>
+      <span> | </span>
+      <a href="#" onclick="revoke_cookie_consent()">Revoke Cookie Consent</a>
+      <span> | </span>
+      <a href="#" onclick="printAllCookies()">Print All Cookies</a>
+    </div>
   </div>
-
 </footer></body>
 
 </html>
